@@ -28,7 +28,7 @@ set expandtab     " Expand TAB to spaces
 " Additional bracket-like characters to match
 set matchpairs+=<:>,「:」,『:』,【:】,“:”,‘:’,《:》
 
-set number relativenumber " Show both absolute and relative line number
+set number " Show only absolute line number
 
 " Ignore casing in general, but become case-sensitive when uppercase is
 " present
