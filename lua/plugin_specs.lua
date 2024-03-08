@@ -29,6 +29,16 @@ local plugin_specs = {
     end,
   },
 
+  -- Telescope
+  {
+    "nvim-telescope/telescope.nvim",
+    tag = "0.1.5",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter"
+    }
+  },
+
   -- Debug Adapter Protocol (DAP)
   {
     "mfussenegger/nvim-dap",

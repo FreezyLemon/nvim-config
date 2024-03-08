@@ -6,9 +6,9 @@ local core_conf_files = {
   "globals.lua", -- global settings
   "options.vim", -- setting options in nvim
   "autocommands.vim", -- various autocommands
-  "mappings.lua", -- user-defined mappings
   "plugins.vim", -- installed plugins and their configs
   "colorschemes.lua", -- color scheme settings
+  "mappings.lua", -- user-defined mappings
 }
 
 local viml_conf_dir = vim.fn.stdpath("config") .. "/viml_conf"
