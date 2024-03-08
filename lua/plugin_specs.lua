@@ -13,6 +13,10 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugin_specs = {
+  {
+    "neovim/nvim-lspconfig"
+  },
+
   -- Autocompletions
   {
     "hrsh7th/nvim-cmp",
@@ -49,23 +53,12 @@ local plugin_specs = {
 
   -- Rust tools
   {
-    "simrat39/rust-tools.nvim",
-    dependencies = { "neovim/nvim-lspconfig", "nvim-lua/plenary.nvim", "mfussenegger/nvim-dap" },
-    config = function(_, _)
-      local rt = require("rust-tools")
-
-      rt.setup({
-        hover_actions = {
-          auto_focus = true,
-        },
-        server = {
-          on_attach = function(_, bufnr)
-            vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
-          end,
-        },
-      })
-    end,
-    ft = { "rust", "rs" },
+    "mrcjkb/rustaceanvim",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter"
+    },
+    version = "^4",
+    ft = { "rust" },
   },
 
   -- Color schemes
