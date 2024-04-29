@@ -22,6 +22,9 @@ api.nvim_create_autocmd('LspAttach', {
     keymap.set('n', '<space>f', function()
       vim.lsp.buf.format { async = true }
     end, opts)
+    keymap.set('n', '<leader>a', function()
+      vim.cmd.RustLsp('codeAction')
+    end, opts)
   end,
 })
 
